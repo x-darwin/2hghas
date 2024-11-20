@@ -1,0 +1,30 @@
+Page {
+    background-color: #F8F8F8;
+}
+
+.page-content {
+    padding: 16;
+}
+
+.input-field {
+    margin: 8 0;
+    padding: 8;
+    background-color: white;
+    border-width: 1;
+    border-color: #E0E0E0;
+    border-radius: 4;
+}
+
+.primary-button {
+    margin: 8 0;
+    padding: 12;
+    background-color: #007AFF;
+    color: white;
+    border-radius: 4;
+}
+
+.error-message {
+    color: #FF3B30;
+    margin-top: 8;
+    font-size: 14;
+}   

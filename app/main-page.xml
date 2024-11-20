@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="RTMP Viewer" />
+    
+    <StackLayout class="page-content">
+        <TextField 
+            hint="Enter RTMP URL" 
+            text="{{ rtmpUrl }}"
+            class="input-field"
+            returnKeyType="done"
+            autocorrect="false"
+            autocapitalizationType="none"
+        />
+        
+        <Button 
+            text="{{ isPlaying ? 'Stop Stream' : 'Start Stream' }}"
+            tap="{{ toggleStream }}"
+            class="primary-button"
+        />
+        
+        <Label 
+            text="{{ errorMessage }}"
+            class="error-message"
+            visibility="{{ errorMessage ? 'visible' : 'collapsed' }}"
+            textWrap="true"
+        />
+        
+        <ContentView height="100%" visibility="{{ isPlaying ? 'visible' : 'collapsed' }}">
+            <VideoPlayer
+                id="videoPlayer"
+                src="{{ rtmpUrl }}"
+                autoplay="true"
+            />
+        </ContentView>
+    </StackLayout>
+</Page>
